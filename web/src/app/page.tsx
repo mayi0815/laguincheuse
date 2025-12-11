@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -80,14 +81,15 @@ export default function Home() {
               </InfoCard>
             </div>
             <div className="mt-8 flex justify-center">
-              <video
-                src="/chinchin.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
+              <Image
+                src="/chinchin.gif"
+                alt="Deux verres qui trinquent"
+                width={800}
+                height={800}
                 className="h-70 w-full max-w-md rounded-xl object-cover"
-                aria-label="Deux verres qui trinquent"
+                sizes="(max-width: 640px) 100vw, 480px"
+                priority
+                unoptimized
               />
             </div>
           </div>
