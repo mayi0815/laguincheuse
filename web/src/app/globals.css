@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #e9d8b4;
+  --foreground: #2c2a29;
+  --surface: #fff6e5;
+  --muted: #5c534b;
+  --border: #d7c7a0;
+  --card: rgba(255, 255, 255, 0.82);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-bg: #e9d8b4;
+  --color-brand-text: #2c2a29;
+  --color-primary: #141414;
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --font-sans: var(--font-plus-jakarta);
+  --font-display: var(--font-plus-jakarta);
+  --font-anton: var(--font-anton);
+  --font-archivo: var(--font-archivo);
+  --font-manifesto: var(--font-manifesto);
+  --font-geom: var(--font-geom);
+}
+
+body {
+  background: #e9d8b4;
+  color: var(--foreground);
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui,
+    -apple-system, sans-serif;
+}
+
+.font-logo {
+  font-family: var(--font-manifesto), "Plus Jakarta Sans", system-ui,
+    -apple-system, sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.font-geom {
+  font-family: var(--font-geom), "Plus Jakarta Sans", system-ui, -apple-system,
+    sans-serif;
+}
+
+@keyframes clink-left {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  30% {
+    transform: rotate(-14deg) translateY(-3px);
+  }
+  45% {
+    transform: rotate(-6deg) translateY(-1px);
+  }
+}
+
+@keyframes clink-right {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  30% {
+    transform: rotate(14deg) translateY(-3px);
+  }
+  45% {
+    transform: rotate(6deg) translateY(-1px);
+  }
+}
+
+@keyframes sparkle-up {
+  0% {
+    transform: translateY(6px) scale(0.6);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-2px) scale(1);
+    opacity: 1;
+  }
+  60%,
+  100% {
+    transform: translateY(-12px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+.animate-clink-left {
+  animation: clink-left 1.8s ease-in-out infinite;
+}
+
+.animate-clink-right {
+  animation: clink-right 1.8s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle-up 1.8s ease-in-out infinite;
+}
