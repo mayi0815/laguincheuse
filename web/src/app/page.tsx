@@ -86,7 +86,7 @@ export default function Home() {
                 alt="Deux verres qui trinquent"
                 width={800}
                 height={800}
-                className="h-70 w-full max-w-md rounded-xl object-cover"
+                className="h-80 w-full max-w-md rounded-xl object-cover"
                 sizes="(max-width: 640px) 100vw, 480px"
                 priority
                 unoptimized
