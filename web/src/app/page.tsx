@@ -30,11 +30,6 @@ export default function Home() {
             <span className="rounded-full border border-primary/15 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary shadow-sm">
               Infos pratiques
             </span>
-            <p className="text-sm text-brand-text/75">
-              Notre équipe vous accueille du déjeuner jusqu&apos;au dernier
-              verre. <br/>Retrouvez les horaires, le téléphone et l&apos;adresse en
-              un coup d&apos;œil.
-            </p>
           </div>
 
           <div className="rounded-3xl border border-brand-text/15 bg-white p-8 text-center shadow-[0_22px_60px_rgba(20,20,20,0.08)]">
