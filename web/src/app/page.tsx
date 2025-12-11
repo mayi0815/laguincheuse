@@ -50,13 +50,14 @@ export default function Home() {
               </InfoCard>
               <InfoCard title="Adresse">
                 <a
-                  className="inline-flex items-center gap-2 text-primary underline-offset-4 hover:underline"
+                  className="inline-flex items-center gap-2 text-primary underline decoration-primary underline-offset-4"
                   href="https://www.google.com/maps/search/?api=1&query=266+Rue+du+Faubourg+Saint-Martin,+75010+Paris"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span aria-hidden>📍</span>
-                  <span>266 Rue du Faubourg Saint-Martin, 75010 Paris</span>
+                  <span className="leading-none">
+                    266 Rue du Faubourg Saint-Martin, 75010 Paris
+                  </span>
                 </a>
                 <br />
                 M°2 / M°7 Stalingrad
