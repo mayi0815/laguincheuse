@@ -23,10 +23,6 @@ export default function Home() {
             La Guincheuse
           </h1>
           <WaveLine className="mt-1 h-4 w-full max-w-xl text-primary" />
-          <p className="mt-2 max-w-2xl text-balance text-base text-brand-text/80 sm:text-lg">
-            Site Web en Construction. En attendant, retrouvez nos informations
-            ci-dessous.
-          </p>
         </header>
 
         <section className="mx-auto flex w-full max-w-4xl flex-col gap-6 font-geom">
@@ -36,7 +32,7 @@ export default function Home() {
             </span>
             <p className="text-sm text-brand-text/75">
               Notre équipe vous accueille du déjeuner jusqu&apos;au dernier
-              verre. Retrouvez les horaires, le téléphone et l&apos;adresse en
+              verre. <br/>Retrouvez les horaires, le téléphone et l&apos;adresse en
               un coup d&apos;œil.
             </p>
           </div>
