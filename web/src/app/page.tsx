@@ -1,128 +1,141 @@
-import Link from "next/link";
+import type { ReactNode } from "react";
 
-const highlights = [
-  { title: "Cuisine de saison", text: "Carte courte, produits frais, plats du marché qui changent au fil des arrivages." },
-  { title: "Bar convivial", text: "Cocktails maison, vins nature et bières locales servies dans une ambiance guinguette." },
-  { title: "Groupes", text: "Privatisation partielle, grandes tablées et formules pour célébrer vos moments." },
-];
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-brand-bg">
+    <div className="relative flex min-h-screen flex-col overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-0 top-0 h-64 w-64 -translate-x-12 -translate-y-16 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-72 w-72 translate-x-10 translate-y-10 rounded-full bg-primary/15 blur-3xl" />
+        <div className="absolute left-4 top-6 h-36 w-36 rounded-full bg-primary/10 blur-3xl sm:left-16 sm:top-12" />
+        <div className="absolute right-4 bottom-6 h-40 w-40 rounded-full bg-primary/15 blur-3xl sm:right-16 sm:bottom-10" />
       </div>
 
-      <main className="relative mx-auto flex min-h-screen max-w-5xl flex-col gap-12 px-6 py-14 sm:px-10 sm:py-16">
-        <header className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="space-y-3">
-            <p className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
-              Bistrot &amp; Bar · Paris 11e
-            </p>
-            <h1 className="font-logo text-5xl uppercase leading-[0.9] tracking-[0.12em] text-primary sm:text-6xl">
-              La Guincheuse
-            </h1>
-            <p className="max-w-2xl text-base text-brand-text/80 sm:text-lg">
-              Un bistrot vibrant et chaleureux pour boire un verre, dîner entre amis ou fêter un événement. Cuisine vivante, équipe aux petits soins et une carte qui met de bonne humeur.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/reservation"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-brand-bg shadow-lg shadow-primary/25 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30 active:translate-y-0"
-              >
-                Réserver une table
-              </Link>
-              <a
-                href="mailto:contact@laguincheuse.fr"
-                className="inline-flex items-center gap-2 rounded-xl border border-primary/15 bg-white/70 px-5 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-primary transition hover:-translate-y-0.5 hover:border-primary/40"
-              >
-                Nous écrire
-              </a>
-            </div>
-          </div>
-          <div className="relative mx-auto flex h-48 w-48 items-center justify-center overflow-hidden rounded-full border border-primary/15 bg-white/80 shadow-[0_18px_60px_rgba(20,20,20,0.12)] sm:mx-0 sm:h-56 sm:w-56">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-primary/10" />
-            <div className="relative flex items-center gap-3">
-              <img src="/globe.svg" alt="" className="h-14 w-14 animate-clink-left opacity-90" />
-              <img src="/globe.svg" alt="" className="h-14 w-14 animate-clink-right opacity-90" />
-              <span className="absolute -top-3 right-0 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                Santé !
+      <main className="relative mx-auto flex w-full max-w-5xl flex-1 flex-col gap-10 px-4 py-12 pb-16 sm:px-8 sm:py-16">
+        <header className="flex flex-col items-center text-center gap-3">
+          <div className="relative mt-1 flex w-full max-w-xl justify-center">
+            <WaveLine className="h-4 w-full text-primary" />
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="bg-brand-bg px-3 font-geom text-sm uppercase tracking-[0.2em] text-primary">
+                Bistrot
               </span>
-            </div>
+            </span>
           </div>
+          <h1 className="mt-2 font-logo text-6xl uppercase leading-[0.9] tracking-[0.12em] text-primary sm:text-7xl md:text-8xl">
+            La Guincheuse
+          </h1>
+          <WaveLine className="mt-1 h-4 w-full max-w-xl text-primary" />
+          <p className="mt-2 max-w-2xl text-balance text-base text-brand-text/80 sm:text-lg">
+            Site Web en Construction. En attendant, retrouvez nos informations
+            ci-dessous.
+          </p>
         </header>
 
-        <section className="grid gap-6 rounded-2xl border border-brand-text/10 bg-card p-7 shadow-[0_18px_60px_rgba(20,20,20,0.08)] backdrop-blur sm:grid-cols-3">
-          {highlights.map((item) => (
-            <div key={item.title} className="space-y-2">
-              <p className="font-archivo text-xs uppercase tracking-[0.22em] text-primary/80">
-                {item.title}
-              </p>
-              <p className="text-sm text-brand-text/80">{item.text}</p>
-            </div>
-          ))}
-        </section>
-
-        <section className="grid gap-6 sm:grid-cols-[1.6fr_1fr]">
-          <div className="rounded-2xl border border-brand-text/10 bg-card p-7 shadow-[0_18px_60px_rgba(20,20,20,0.08)] backdrop-blur">
-            <p className="font-archivo text-xs uppercase tracking-[0.22em] text-brand-text/70">
-              Horaires
+        <section className="mx-auto flex w-full max-w-4xl flex-col gap-6 font-geom">
+          <div className="flex flex-col items-center gap-3 text-center">
+            <span className="rounded-full border border-primary/15 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary shadow-sm">
+              Infos pratiques
+            </span>
+            <p className="text-sm text-brand-text/75">
+              Notre équipe vous accueille du déjeuner jusqu&apos;au dernier
+              verre. Retrouvez les horaires, le téléphone et l&apos;adresse en
+              un coup d&apos;œil.
             </p>
-            <div className="mt-4 grid gap-3 text-sm text-brand-text/80 sm:grid-cols-2">
-              <div>
-                <p className="font-semibold text-primary">Midi</p>
-                <p className="mt-1">Du mardi au vendredi · 12h00 — 14h30</p>
-              </div>
-              <div>
-                <p className="font-semibold text-primary">Soir</p>
-                <p className="mt-1">Du mardi au samedi · 18h00 — 00h30</p>
-              </div>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-3 text-sm text-brand-text/80">
-              <span className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary">
-                Happy hour 18h — 20h
-              </span>
-              <span className="rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary">
-                Brunch le dimanche
-              </span>
-            </div>
           </div>
 
-          <div className="rounded-2xl border border-brand-text/10 bg-card p-7 shadow-[0_18px_60px_rgba(20,20,20,0.08)] backdrop-blur space-y-3">
-            <p className="font-archivo text-xs uppercase tracking-[0.22em] text-brand-text/70">
-              Contact
-            </p>
-            <div className="space-y-2 text-sm text-brand-text/80">
-              <p>
-                Téléphone :{" "}
+          <div className="rounded-3xl border border-brand-text/15 bg-white p-8 text-center shadow-[0_22px_60px_rgba(20,20,20,0.08)]">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <InfoCard title="Horaires">
+                Lundi - Jeudi : 10:30 - 14:30, 18:30 - 22:30
+                <br />
+                Vendredi et Samedi : 10:30 - 14:30, 18:30 - 00:00
+              </InfoCard>
+              <InfoCard title="Téléphone">
                 <a
-                  className="underline underline-offset-4 hover:text-primary"
-                  href="tel:+33123456789"
+                  className="inline-flex items-center gap-2 text-primary underline-offset-4 hover:underline"
+                  href="tel:0956671472"
                 >
-                  01 23 45 67 89
+                  <span aria-hidden>📞</span>
+                  <span>09 56 67 14 72</span>
                 </a>
-              </p>
-              <p>
-                Email :{" "}
+              </InfoCard>
+              <InfoCard title="Adresse">
                 <a
-                  className="underline underline-offset-4 hover:text-primary"
-                  href="mailto:contact@laguincheuse.fr"
+                  className="inline-flex items-center gap-2 text-primary underline-offset-4 hover:underline"
+                  href="https://www.google.com/maps/search/?api=1&query=266+Rue+du+Faubourg+Saint-Martin,+75010+Paris"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  contact@laguincheuse.fr
+                  <span aria-hidden>📍</span>
+                  <span>266 Rue du Faubourg Saint-Martin, 75010 Paris</span>
                 </a>
-              </p>
-              <p>Adresse : 12 rue de la Joie, 75011 Paris</p>
-              <Link
-                href="/reservation"
-                className="inline-flex items-center gap-2 rounded-xl border border-primary/15 bg-white/80 px-4 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-primary transition hover:-translate-y-0.5 hover:border-primary/40"
-              >
-                Demander une réservation →
-              </Link>
+                <br />
+                M°2 / M°7 Stalingrad
+              </InfoCard>
+              <InfoCard title="Contact direct">
+                <a
+                  className="inline-flex items-center gap-2 text-primary underline-offset-4 hover:underline"
+                  href="mailto:guincheuse@gmail.com"
+                >
+                  <span aria-hidden>✉️</span>
+                  <span>GUINCHEUSE@gmail.com</span>
+                </a>
+              </InfoCard>
+            </div>
+            <div className="mt-8 flex justify-center">
+              <video
+                src="/chinchin.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-70 w-full max-w-md rounded-xl object-cover"
+                aria-label="Deux verres qui trinquent"
+              />
             </div>
           </div>
         </section>
       </main>
+
+      <footer className="mb-4 mt-auto flex flex-col items-center gap-4 px-4 text-center text-sm text-brand-text/80 sm:flex-row sm:justify-center sm:gap-6 sm:text-center sm:px-8 font-geom">
+        <div className="flex items-center gap-3">
+          <div>
+            <p>© 2025 La Guincheuse. Tous droits réservés.</p>
+          </div>
+        </div>
+      </footer>
     </div>
+  );
+}
+
+function InfoCard({
+  title,
+  children,
+}: {
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="rounded-xl border border-brand-text/10 bg-white/70 px-4 py-3 shadow-sm">
+      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-text/70">
+        {title}
+      </p>
+      <p className="mt-2 text-sm text-brand-text/90">{children}</p>
+    </div>
+  );
+}
+
+function WaveLine({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 600 25"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M0 16 C10 8 20 8 30 16 S50 24 60 16 S80 8 90 16 S110 24 120 16 S140 8 150 16 S170 24 180 16 S200 8 210 16 S230 24 240 16 S260 8 270 16 S290 24 300 16 S320 8 330 16 S350 24 360 16 S380 8 390 16 S410 24 420 16 S440 8 450 16 S470 24 480 16 S500 8 510 16 S530 24 540 16 S560 8 570 16 S590 24 600 16"
+        stroke="currentColor"
+        strokeWidth="5"
+        strokeLinecap="round"
+      />
+    </svg>
   );
 }
