@@ -58,6 +58,7 @@ const menuItems: MenuItems = {
                 title: "Nem",
                 price: "8.60€",
                 description: "Légumes ou poulet, 6 pièces, sauce nem",
+                tags: ["Halal"],
                 image: null,
             },
         ],
@@ -238,12 +239,6 @@ export default function CartePage() {
 
     return (
         <div className="min-h-screen bg-[#EFE6D5] text-[#111] font-body">
-            <style jsx global>{`
-                html,
-                body {
-                    background-color: #f4ebd0;
-                }
-            `}</style>
             <Header variant="opaque" />
 
             {/* Main Container with top padding for Fixed Header */}
@@ -341,6 +336,8 @@ export default function CartePage() {
                                     const hasTitle = item.title.trim().length > 0;
                                     const highlightPhrase = "Sur commande 24h à l'avance";
                                     let descriptionNode: ReactNode = item.description;
+                                    const isSeafoodPlateauDescription =
+                                        isSeafoodItem && item.description.startsWith("Grand (4 personnes)");
 
                                     if (isSeafoodItem && item.description.includes(highlightPhrase)) {
                                         const [before, after = ""] = item.description.split(highlightPhrase);
@@ -398,7 +395,12 @@ export default function CartePage() {
                                                                 {item.price}
                                                             </span>
                                                         </div>
-                                                        <p className="text-[#444] text-sm md:text-base font-normal leading-relaxed">
+                                                        <p
+                                                            className={`text-[#444] font-normal leading-relaxed ${isSeafoodPlateauDescription
+                                                                ? "text-lg md:text-xl"
+                                                                : "text-sm md:text-base"
+                                                                }`}
+                                                        >
                                                             {descriptionNode}
                                                         </p>
                                                     </div>
@@ -433,7 +435,12 @@ export default function CartePage() {
                                                                 {item.price}
                                                             </span>
                                                         </div>
-                                                        <p className="text-[#444] text-sm md:text-base font-normal leading-relaxed">
+                                                        <p
+                                                            className={`text-[#444] font-normal leading-relaxed ${isSeafoodPlateauDescription
+                                                                ? "text-lg md:text-xl"
+                                                                : "text-sm md:text-base"
+                                                                }`}
+                                                        >
                                                             {descriptionNode}
                                                         </p>
                                                     </div>
