@@ -245,7 +245,7 @@ export default function CartePage() {
             <main className="max-w-3xl mx-auto px-6 pb-32 pt-24 md:pt-32">
                 {/* Page Title - Moved ABOVE sticky nav so it's not covered */}
                 <header className="text-center mb-12">
-                    <h1 className="font-geom text-6xl md:text-8xl text-primary uppercase leading-[0.9] tracking-normal mb-4">
+                    <h1 className="font-sullivan text-6xl md:text-8xl text-primary uppercase leading-[0.9] tracking-normal mb-4">
                         La Carte
                     </h1>
                     <p className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-[#444]">

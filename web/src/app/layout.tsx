@@ -43,6 +43,12 @@ const geom = localFont({
   display: "swap",
 });
 
+const sullivan = localFont({
+  src: "../../public/Sullivan-Fill.otf",
+  variable: "--font-sullivan",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "La Guincheuse | Bistrot & Bar à Paris",
   description:
@@ -57,7 +63,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${plusJakarta.variable} ${anton.variable} ${archivoNarrow.variable} ${txManifesto.variable} ${geom.variable} antialiased bg-brand-bg text-brand-text`}
+        className={`${plusJakarta.variable} ${anton.variable} ${archivoNarrow.variable} ${txManifesto.variable} ${geom.variable} ${sullivan.variable} antialiased bg-brand-bg text-brand-text`}
       >
         {isProduction && (
           <>

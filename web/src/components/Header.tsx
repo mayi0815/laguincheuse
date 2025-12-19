@@ -68,7 +68,7 @@ export function Header({ variant = "default" }: { variant?: "default" | "opaque"
       <header className={`hidden md:flex ${headerClasses} uppercase tracking-[0.05em]`}>
         <Link
           href="/"
-          className="shrink-0 text-2xl lg:text-3xl font-geom font-bold whitespace-nowrap hover:opacity-80 transition-opacity"
+          className="shrink-0 text-3xl lg:text-4xl font-sullivan font-bold whitespace-nowrap hover:opacity-80 transition-opacity"
         >
           La Guincheuse
         </Link>
@@ -116,7 +116,7 @@ export function Header({ variant = "default" }: { variant?: "default" | "opaque"
       <header className={`flex md:hidden ${mobileHeaderClasses}`}>
         <Link
           href="/"
-          className="text-xl font-bold font-geom uppercase tracking-[0.05em] hover:opacity-80 transition-opacity"
+          className="text-2xl font-bold font-sullivan uppercase tracking-[0.05em] hover:opacity-80 transition-opacity"
         >
           La Guincheuse
         </Link>
@@ -136,7 +136,7 @@ export function Header({ variant = "default" }: { variant?: "default" | "opaque"
           <div className="flex w-full items-start justify-between gap-3 mb-10">
             <Link
               href="/"
-              className="text-xl font-bold font-geom uppercase tracking-[0.05em]"
+              className="text-2xl font-bold font-sullivan uppercase tracking-[0.05em]"
               onClick={() => setMobileMenuOpen(false)}
             >
               La Guincheuse

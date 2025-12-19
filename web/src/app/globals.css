@@ -42,6 +42,7 @@
   --font-archivo: var(--font-archivo);
   --font-manifesto: var(--font-manifesto);
   --font-geom: var(--font-geom);
+  --font-sullivan: var(--font-sullivan);
 }
 
 .material-symbols-outlined {
@@ -104,6 +105,11 @@ body {
 .font-geom {
   font-family: var(--font-geom), "Plus Jakarta Sans", system-ui, -apple-system,
     sans-serif;
+}
+
+.font-sullivan {
+  font-family: var(--font-sullivan), var(--font-geom), "Plus Jakarta Sans",
+    system-ui, -apple-system, sans-serif;
 }
 
 @keyframes clink-left {
