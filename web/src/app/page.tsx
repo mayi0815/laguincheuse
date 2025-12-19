@@ -280,10 +280,10 @@ function ConceptSection() {
 
   return (
     <section
-      id="concept"
-      className="relative z-10 bg-[#f4ebd0]/60 px-3 py-20 text-bistro-ink md:px-6 overflow-hidden"
+      className="relative z-10 bg-bistro-card px-3 py-20 text-bistro-ink md:px-6 overflow-hidden"
       ref={conceptRef}
     >
+      <div id="concept" className="scroll-mt-24 md:scroll-mt-32" />
       <div className="pointer-events-none absolute inset-0 z-0 hidden md:block overflow-hidden">
         <div
           ref={conceptBgRef}
@@ -298,7 +298,7 @@ function ConceptSection() {
             className="object-cover opacity-30"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f4ebd0]/70 via-[#f4ebd0]/45 to-[#f4ebd0]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f0ead6]/70 via-[#f0ead6]/45 to-[#f0ead6]/80" />
       </div>
 
       {/* Decorative background element */}

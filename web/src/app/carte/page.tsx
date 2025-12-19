@@ -238,6 +238,12 @@ export default function CartePage() {
 
     return (
         <div className="min-h-screen bg-[#EFE6D5] text-[#111] font-body">
+            <style jsx global>{`
+                html,
+                body {
+                    background-color: #f4ebd0;
+                }
+            `}</style>
             <Header variant="opaque" />
 
             {/* Main Container with top padding for Fixed Header */}
