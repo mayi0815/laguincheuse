@@ -1,36 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #e9d8b4;
-  --foreground: #2c2a29;
-  --surface: #fff6e5;
-  --muted: #5c534b;
-  --border: #d7c7a0;
-  --card: rgba(255, 255, 255, 0.82);
+  --background: #e3d8b8;
+  --foreground: #111111;
+  --surface: #f0ead6;
+  --muted: #4d433b;
+  --border: #d8caa5;
+  --card: rgba(240, 234, 214, 0.92);
+  --primary: #c92a1d;
+  --bistro-bg: #e3d8b8;
+  --bistro-ink: #111111;
+  --bistro-card: #f0ead6;
+  --bistro-dark: #1a1a1a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-brand-bg: #e9d8b4;
-  --color-brand-text: #2c2a29;
-  --color-primary: #141414;
+  --color-brand-bg: var(--bistro-bg);
+  --color-brand-text: var(--bistro-ink);
+  --color-primary: var(--primary);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card: var(--card);
+  --color-bistro-bg: var(--bistro-bg);
+  --color-bistro-ink: var(--bistro-ink);
+  --color-bistro-card: var(--bistro-card);
+  --color-bistro-dark: var(--bistro-dark);
   --font-sans: var(--font-plus-jakarta);
   --font-display: var(--font-plus-jakarta);
+  --font-body: var(--font-plus-jakarta);
   --font-anton: var(--font-anton);
   --font-archivo: var(--font-archivo);
   --font-manifesto: var(--font-manifesto);
   --font-geom: var(--font-geom);
 }
 
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga" 1;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
 body {
-  background: #e9d8b4;
+  background: var(--bistro-bg);
   color: var(--foreground);
   font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui,
     -apple-system, sans-serif;
+  min-height: max(884px, 100dvh);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 .font-logo {
@@ -96,4 +151,22 @@ body {
 
 .animate-sparkle {
   animation: sparkle-up 1.8s ease-in-out infinite;
+}
+
+@keyframes reveal-up {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: reveal-up 0.9s ease-out forwards;
+  will-change: opacity, transform;
 }

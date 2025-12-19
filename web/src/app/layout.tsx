@@ -6,7 +6,11 @@ import {
 } from "next/font/google";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
+import { CookieNotice } from "@/components/CookieNotice";
+
+const isProduction = process.env.NODE_ENV === "production";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -55,7 +59,24 @@ export default function RootLayout({
       <body
         className={`${plusJakarta.variable} ${anton.variable} ${archivoNarrow.variable} ${txManifesto.variable} ${geom.variable} antialiased bg-brand-bg text-brand-text`}
       >
+        {isProduction && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-4H2D4KE5W5"
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-4H2D4KE5W5');
+              `}
+            </Script>
+          </>
+        )}
         {children}
+        <CookieNotice />
         <Analytics />
       </body>
     </html>
