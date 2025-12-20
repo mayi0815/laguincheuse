@@ -45,8 +45,8 @@ const dishes = [
     image: "/common/confit_de_canard_apercu.webp",
   },
   {
-    title: "Saumon Pavé",
-    description: "Crème légère, herbes fraîches, zeste de citron vert.",
+    title: "Blanquette de saumon",
+    description: "Riz aux oignons confits.",
     image: "/common/saumonpave.webp",
   },
   {
