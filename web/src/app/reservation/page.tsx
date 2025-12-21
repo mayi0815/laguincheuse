@@ -366,8 +366,8 @@ export default function ReservationPage() {
                 Horaires
               </p>
               <div className="mt-2 flex flex-col gap-1 text-sm text-[#5B564D]">
-                <p>Lundi - Jeudi : 10:30 - 14:30, 18:30 - 22:30</p>
-                <p>Vendredi et Samedi : 10:30 - 14:30, 18:30 - 00:00</p>
+                <p>Lundi - Jeudi : 10:30 - 22:30</p>
+                <p>Vendredi et Samedi : 10:30 - 23:30</p>
               </div>
             </div>
           </section>

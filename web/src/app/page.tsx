@@ -454,8 +454,8 @@ function InfoSection() {
           </div>
           <div>
             <p className="font-semibold uppercase tracking-[0.14em] text-primary">Horaires</p>
-            <p>Lundi - Jeudi : 10:30 - 14:30, 18:30 - 22:30</p>
-            <p>Vendredi et Samedi : 10:30 - 14:30, 18:30 - 00:00</p>
+            <p>Lundi - Jeudi : 10:30 - 22:30</p>
+            <p>Vendredi et Samedi : 10:30 - 23:30</p>
           </div>
           <div>
             <p className="font-semibold uppercase tracking-[0.14em] text-primary">Email</p>
