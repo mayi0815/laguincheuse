@@ -314,7 +314,7 @@ export default function ReservationPage() {
               <ul className="space-y-3 text-[#5B564D]">
                 <InfoItem
                   title="Service midi & soir"
-                  description="Réservation ouverte pour le déjeuner (10h30 - 14h30) et le dîner (18h30 - 22h30)."
+                  description="Réservation ouverte pour le déjeuner et le dîner."
                 />
                 <InfoItem
                   title="Groupes jusqu’à 10"
