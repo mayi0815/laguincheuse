@@ -30,7 +30,7 @@ const TIME_FORMATTER = new Intl.DateTimeFormat("fr-FR", {
 const SAMPLE_EVENT: EventItem = {
   id: "fallback-nawal-michel-2025-12-19",
   title: "Pablo Lopez-Nussa",
-  start: "2025-12-23T21:00:00.000Z",
+  start: "2025-12-23T18:00:00.000Z",
   end: "2025-12-23T22:30:00.000Z",
   type: "guitare",
   desc: "Musique Cubaine: La musique de Pablo est intimiste à la fois douce et mélodieuse, rythmique et joyeuse, avec un répertoire concocté pour chaque occasion…",
